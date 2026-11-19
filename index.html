@@ -22,24 +22,69 @@ p, li { color:var(--muted); }
 code { font-size:15px; }
 footer { margin-top:48px; font-size:15px; color:var(--muted); }
 a { color:var(--accent); }
+main { max-width:960px; }
+.hero { text-align:center; padding-top:24px; }
+.hero .lede { max-width:620px; margin:0 auto; }
+.shot { display:block; width:100%; height:auto; border-radius:14px; margin:36px 0 8px; box-shadow:0 20px 50px rgba(0,0,0,.18); }
+.narrow { max-width:720px; margin:0 auto; }
+.feature { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; margin:56px 0; }
+.feature img { width:100%; height:auto; border-radius:12px; border:1px solid var(--line); box-shadow:0 12px 32px rgba(0,0,0,.14); }
+.feature h3 { font-size:22px; margin:0 0 8px; color:var(--text); }
+.feature.flip img { order:2; }
+.specs { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+.specs .card { padding:16px 20px; }
+.specs strong { display:block; color:var(--text); }
+@media (max-width:720px) {
+  h1 { font-size:34px; }
+  .feature, .specs { grid-template-columns:1fr; gap:16px; margin:40px 0; }
+  .feature.flip img { order:0; }
+}
 </style>
 </head>
 <body>
 <main>
+<section class="hero">
 <h1>Afterglow</h1>
 <p class="lede">Afterglow warms your Mac's screens after sunset and cools them back at sunrise, on every display, on a schedule you set.</p>
 <a class="download" href="https://github.com/nicholasurban/afterglow-releases/releases/latest/download/Afterglow.dmg">Download for Mac</a>
-<p class="req">Requires a Mac with Apple Silicon (M1 or later) and macOS 14 Sonoma or later. Free. Signed and notarized by Apple, and it updates itself.</p>
+<p class="req">Free. For Apple Silicon Macs (M1 or later) on macOS 14 Sonoma or later. It updates itself.</p>
+</section>
+<img class="shot" src="img/hero.jpg" width="2400" height="1520" alt="Afterglow's menu showing tonight's schedule and profiles, next to the profile editor">
 
-<h2>What it does</h2>
-<ul>
-<li>Profiles for day, evening, night and sleep, each with its own color temperature and brightness</li>
-<li>Follows sunrise and sunset in your city, with gradual fades</li>
-<li>Different settings for each screen</li>
-<li>Eye breaks, dithering control and other display health tools, all optional</li>
-<li>Pause or wind down to sleep from the menu bar</li>
-</ul>
+<div class="narrow">
+<h2>Why it matters</h2>
+<p>Your screens are often the brightest light you look at after dark. At 11pm they still look like noon unless something changes them.</p>
+<p>Afterglow makes that change for you. It warms and dims your screens as the evening goes on, then brings them back to daylight in the morning, without you touching anything.</p>
 
+<h2>Who it's for</h2>
+<p>Anyone who works or reads on a Mac after dark, especially with an external monitor or two. macOS Night Shift uses one setting for every screen and can't dim. Afterglow goes down to a candle-warm 1200K, dims as well as warms, and gives each screen its own settings.</p>
+</div>
+
+<h2 class="narrow">What it does</h2>
+<div class="feature">
+<img src="img/tonight.jpg" width="720" height="395" alt="Tonight's timeline: Night at 6:35 PM, Sleep at 11:30 PM, back to Day at 7:00 AM" loading="lazy">
+<div><h3>Follows the sun where you are</h3><p>Afterglow knows when the sun sets in your city and fades gradually from Day to Evening, Night and Sleep. You always see what's coming tonight.</p></div>
+</div>
+<div class="feature flip">
+<img src="img/profiles.jpg" width="1440" height="1200" alt="The profile editor with color temperature and dimming sliders and a live preview" loading="lazy">
+<div><h3>Profiles you can tune</h3><p>Each profile has its own color temperature and brightness, from 6800K daylight down to 1200K, with a live preview as you adjust.</p></div>
+</div>
+<div class="feature">
+<img src="img/screens.jpg" width="720" height="242" alt="Separate settings for a Dell monitor and the built-in Retina display" loading="lazy">
+<div><h3>Every screen, its own way</h3><p>Your laptop and your monitor rarely need the same setting. Give each screen its own profile, or apply one to all of them.</p></div>
+</div>
+<div class="narrow">
+<p>Plus optional eye breaks, dithering control and other display health tools, and one click to pause or wind down to sleep from the menu bar.</p>
+
+<h2>Works on</h2>
+<div class="specs">
+<div class="card"><strong>Apple Silicon</strong>M1, M2, M3, M4 or later</div>
+<div class="card"><strong>macOS 14 or later</strong>Sonoma and newer</div>
+<div class="card"><strong>Every display</strong>Built-in and external screens</div>
+</div>
+</div>
+
+<div class="narrow">
 <h2 id="privacy">Privacy</h2>
 <div class="card">
 <p>Afterglow runs on your Mac. Your location, schedules, profiles, settings and activity log stay on your Mac. Afterglow has no account, no analytics and no advertising.</p>
@@ -60,7 +105,9 @@ a { color:var(--accent); }
 <p>Each error code is sent at most once per launch, and display compatibility reports at most once per Afterglow version.</p>
 </div>
 
-<footer>Made by Outliyr. <a href="https://github.com/nicholasurban/afterglow-releases/blob/main/LICENSE">License</a>.</footer>
+</div>
+
+<footer class="narrow">Made by Nick Urban @ Outliyr. <a href="https://github.com/nicholasurban/afterglow-releases/blob/main/LICENSE">License</a>.</footer>
 </main>
 </body>
 </html>
