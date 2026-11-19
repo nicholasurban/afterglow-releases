@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+  <channel>
+    <title>Afterglow</title>
+    <link>https://nicholasurban.github.io/afterglow-releases/appcast.xml</link>
+    <description>Afterglow updates</description>
+    <language>en</language>
+    <item>
+      <title>Afterglow 1.1.0</title>
+      <pubDate>Thu, 19 Nov 2026 05:05:03 GMT</pubDate>
+      <sparkle:version>51</sparkle:version>
+      <sparkle:shortVersionString>1.1.0</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+      <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+      <enclosure url="https://github.com/nicholasurban/afterglow-releases/releases/download/v1.1.0/Afterglow-1.1.0.zip" length="10105352" type="application/octet-stream" sparkle:edSignature="hv26QSVKf5Rz88PvxIkLqafYVmd2UA46FPdrw4txqcS7qkXuw0dnSaeN+u/WMnzdbSDji2OnoN0bA1kJsLbuDQ==" />
+    </item>
+  </channel>
+</rss>
