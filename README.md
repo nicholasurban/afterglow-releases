@@ -10,7 +10,7 @@ Afterglow warms your screens after sunset and cools them back at sunrise, on eve
 
 ## Download
 
-Get the latest `Afterglow-<version>.dmg` from [Releases](https://github.com/nicholasurban/afterglow-releases/releases/latest). Open it and drag Afterglow to Applications.
+Download [Afterglow.dmg](https://github.com/nicholasurban/afterglow-releases/releases/latest/download/Afterglow.dmg) (all versions: [Releases](https://github.com/nicholasurban/afterglow-releases/releases)). Open it and drag Afterglow to Applications.
 
 Requires a Mac with Apple Silicon (M1 or later) and macOS 14 Sonoma or later.
 
