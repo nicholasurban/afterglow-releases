@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Afterglow for Mac</title>
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/icon.png">
 <meta name="description" content="Afterglow warms your Mac's screens after sunset and cools them back at sunrise, on every display.">
 <style>
 :root { --bg:#fbfaf7; --text:#1d1d1f; --muted:#5b5b62; --accent:#c4561b; --card:#ffffff; --line:#e6e2da; }
@@ -27,23 +29,34 @@ main { max-width:960px; }
 .hero .lede { max-width:620px; margin:0 auto; }
 .shot { display:block; width:100%; height:auto; border-radius:14px; margin:36px 0 8px; box-shadow:0 20px 50px rgba(0,0,0,.18); }
 .narrow { max-width:720px; margin:0 auto; }
-.feature { display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; margin:56px 0; }
+.feature { display:grid; grid-template-columns:1.15fr 1fr; gap:40px; align-items:center; margin:40px 0; }
 .feature img { width:100%; height:auto; border-radius:12px; border:1px solid var(--line); box-shadow:0 12px 32px rgba(0,0,0,.14); }
 .feature h3 { font-size:22px; margin:0 0 8px; color:var(--text); }
-.feature.flip img { order:2; }
+.feature.flip { grid-template-columns:1fr 1.15fr; }
+.feature.flip .frame { order:2; }
+.feature .frame { aspect-ratio:16/11; border-radius:14px; display:flex; align-items:center; justify-content:center; padding:24px;
+  background:radial-gradient(120% 90% at 85% 100%, #e08a3c 0%, #7a3a3f 45%, #24182c 100%); box-shadow:0 16px 40px rgba(0,0,0,.18); }
+.feature .frame img { max-width:100%; max-height:100%; width:auto; height:auto; border:0; border-radius:10px; box-shadow:0 18px 40px rgba(0,0,0,.45); }
+.ic { width:22px; height:22px; flex:none; color:var(--accent); }
+.feature h3, .specs strong { display:flex; align-items:center; gap:10px; }
+.specs .ic { width:20px; height:20px; }
+.appicon { width:96px; height:96px; display:block; margin:0 auto 12px; }
+
 .specs { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
 .specs .card { padding:16px 20px; }
-.specs strong { display:block; color:var(--text); }
+.specs strong { display:flex; align-items:center; gap:10px; color:var(--text); margin-bottom:2px; }
 @media (max-width:720px) {
   h1 { font-size:34px; }
-  .feature, .specs { grid-template-columns:1fr; gap:16px; margin:40px 0; }
-  .feature.flip img { order:0; }
+  .feature, .feature.flip, .specs { grid-template-columns:1fr; gap:16px; margin:40px 0; }
+  .feature.flip .frame { order:0; }
+  .feature .frame { aspect-ratio:auto; padding:20px; }
 }
 </style>
 </head>
 <body>
 <main>
 <section class="hero">
+<img class="appicon" src="img/icon.png" width="96" height="96" alt="">
 <h1>Afterglow</h1>
 <p class="lede">Afterglow warms your Mac's screens after sunset and cools them back at sunrise, on every display, on a schedule you set.</p>
 <a class="download" href="https://github.com/nicholasurban/afterglow-releases/releases/latest/download/Afterglow.dmg">Download for Mac</a>
@@ -62,25 +75,25 @@ main { max-width:960px; }
 
 <h2 class="narrow">What it does</h2>
 <div class="feature">
-<img src="img/tonight.jpg" width="720" height="395" alt="Tonight's timeline: Night at 6:35 PM, Sleep at 11:30 PM, back to Day at 7:00 AM" loading="lazy">
-<div><h3>Follows the sun where you are</h3><p>Afterglow knows when the sun sets in your city and fades gradually from Day to Evening, Night and Sleep. You always see what's coming tonight.</p></div>
+<div class="frame"><img src="img/tonight.jpg" width="720" height="395" alt="Tonight's timeline: Night at 6:35 PM, Sleep at 11:30 PM, back to Day at 7:00 AM" loading="lazy"></div>
+<div><h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>Follows the sun where you are</h3><p>Afterglow knows when the sun sets in your city and fades gradually from Day to Evening, Night and Sleep. You always see what's coming tonight.</p></div>
 </div>
 <div class="feature flip">
-<img src="img/profiles.jpg" width="1440" height="1200" alt="The profile editor with color temperature and dimming sliders and a live preview" loading="lazy">
-<div><h3>Profiles you can tune</h3><p>Each profile has its own color temperature and brightness, from 6800K daylight down to 1200K, with a live preview as you adjust.</p></div>
+<div class="frame"><img src="img/profiles.jpg" width="1440" height="1200" alt="The profile editor with color temperature and dimming sliders and a live preview" loading="lazy"></div>
+<div><h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0"/><circle cx="16" cy="6" r="2"/><circle cx="10" cy="12" r="2"/><circle cx="18" cy="18" r="2"/></svg>Profiles you can tune</h3><p>Each profile has its own color temperature and brightness, from 6800K daylight down to 1200K, with a live preview as you adjust.</p></div>
 </div>
 <div class="feature">
-<img src="img/screens.jpg" width="720" height="242" alt="Separate settings for a Dell monitor and the built-in Retina display" loading="lazy">
-<div><h3>Every screen, its own way</h3><p>Your laptop and your monitor rarely need the same setting. Give each screen its own profile, or apply one to all of them.</p></div>
+<div class="frame"><img src="img/screens.jpg" width="720" height="242" alt="Separate settings for a Dell monitor and the built-in Retina display" loading="lazy"></div>
+<div><h3><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="13" height="9" rx="1.5"/><path d="M6 17h5M8.5 13v4"/><rect x="17" y="8" width="5" height="9" rx="1"/></svg>Every screen, its own way</h3><p>Your laptop and your monitor rarely need the same setting. Give each screen its own profile, or apply one to all of them.</p></div>
 </div>
 <div class="narrow">
 <p>Plus optional eye breaks, dithering control and other display health tools, and one click to pause or wind down to sleep from the menu bar.</p>
 
 <h2>Works on</h2>
 <div class="specs">
-<div class="card"><strong>Apple Silicon</strong>M1, M2, M3, M4 or later</div>
-<div class="card"><strong>macOS 14 or later</strong>Sonoma and newer</div>
-<div class="card"><strong>Every display</strong>Built-in and external screens</div>
+<div class="card"><strong><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg>Apple Silicon</strong>M1, M2, M3, M4 or later</div>
+<div class="card"><strong><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="11" rx="1.5"/><path d="M2 19h20"/></svg>macOS 14 or later</strong>Sonoma and newer</div>
+<div class="card"><strong><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="13" rx="2"/><path d="M8 21h8M12 16v5"/></svg>Every display</strong>Built-in and external screens</div>
 </div>
 </div>
 
