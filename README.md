@@ -14,11 +14,15 @@ Download [Afterglow.dmg](https://github.com/nicholasurban/afterglow-releases/rel
 
 Requires a Mac with Apple Silicon (M1 or later) and macOS 14 Sonoma or later.
 
-Afterglow is signed and notarized by Apple and updates itself. It asks before installing an update.
+Afterglow is signed and notarized by Apple and updates itself.
 
 ## Privacy
 
-Your location, schedules and settings stay on your Mac. Afterglow sends optional crash reports with no personal data, and you can turn them off. Details: [privacy](https://nicholasurban.github.io/afterglow-releases/#privacy).
+Your location, schedules and settings stay on your Mac. Afterglow has no account, analytics or ads.
+
+Optional crash reports are on by default. Turn them off in Settings > General > "Share crash reports".
+
+Reports contain only technical details: your Mac model, macOS and Afterglow versions, number of displays, and an error code or crash trace. They never contain your location, app or window names, websites, settings, file paths or your name.
 
 ## License
 
