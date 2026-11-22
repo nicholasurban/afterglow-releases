@@ -6,6 +6,15 @@
     <description>Afterglow updates</description>
     <language>en</language>
     <item>
+      <title>Afterglow 1.1.4</title>
+      <pubDate>Sun, 22 Nov 2026 23:29:31 GMT</pubDate>
+      <sparkle:version>57</sparkle:version>
+      <sparkle:shortVersionString>1.1.4</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>14.0</sparkle:minimumSystemVersion>
+      <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+      <enclosure url="https://github.com/nicholasurban/afterglow-releases/releases/download/v1.1.4/Afterglow-1.1.4.zip" length="10244972" type="application/octet-stream" sparkle:edSignature="U66YznW+2CUc075ZZySdS8BIq0SsMbBvOe0c/Eo3uBnfrpeiaAPUlBw3z5juXWMQQRpoLrZxP/rfHSsukTurDQ==" />
+    </item>
+    <item>
       <title>Afterglow 1.1.3</title>
       <pubDate>Sun, 22 Nov 2026 22:14:08 GMT</pubDate>
       <sparkle:version>56</sparkle:version>
