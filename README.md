@@ -14,7 +14,7 @@ Download [Afterglow.dmg](https://github.com/nicholasurban/afterglow-releases/rel
 
 Requires a Mac with Apple Silicon (M1 or later) and macOS 14 Sonoma or later.
 
-Afterglow is signed and notarized by Apple and updates itself.
+Afterglow is signed and notarized by Apple.
 
 ## Privacy
 
